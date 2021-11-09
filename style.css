@@ -9,6 +9,7 @@ body {
 
 .en-tete {
     background-image: url(img/background.jpg);
+    background-repeat: no-repeat;
     height: 200px;
 }
 
