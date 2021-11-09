@@ -1,0 +1,206 @@
+<!-- 08-01-diaporama.html -->
+
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <title>JavaScript - VIII/02 - Diaporama avec setInterval</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- <script src="intro.js"></script> -->
+</head>
+
+<body>
+
+  <!-- =================================== -->
+  <!-- navbar bootstrap -->
+  <!-- =================================== -->
+  <nav class="navbar navbar-expand-lg navbar-light style="background-color: #;">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="../index.html">JS</a>
+       <!-- button c'est pour le menu burger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- menu intro et variables -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="01_introduction" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Intro</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+              <li><a class="dropdown-item" href="../01_introduction/01-01-intro.html">Intro 1</a></li>
+              <li><a class="dropdown-item" href="../01_introduction/01-02-intro.html">Intro 2</a></li>
+              <li><a class="dropdown-item" href="../01_introduction/01-03-intro.html">Intro 3</a></li>
+              <li><a class="dropdown-item" href="../01_introduction/01-04-intro.html">Intro 4</a></li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+              <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+            </ul>
+          </li>
+
+          <!-- menu intro et variables -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="01_introduction" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Variables</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+              <li><a class="dropdown-item" href="../02_variables_constantes/02_01_intro.html">Intro</a></li>
+              <li><a class="dropdown-item" href="../02_variables_constantes/02_02_affichage.html">Affichage</a></li>
+              <li><a class="dropdown-item" href="../02_variables_constantes/02_03_types.html">Types</a></li>
+              <li><a class="dropdown-item" href="../02_variables_constantes/02_04_operateurs.html">Opérateurs</a></li>
+              <li><a class="dropdown-item" href="../02_variables_constantes/02_05_concatenation.html">Concaténation</a></li>
+              <li><a class="dropdown-item" href="../02_variables_constantes/02_06_constantes.html">Constantes</a></li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+              <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+            </ul>
+          </li>
+
+          <!-- menu structure_controle - 03 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="02_variables_constantes" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Structures</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="../03_structure_controle/03_01_intro.html">Intro</a></li>
+              <li><a class="dropdown-item" href="../03_structure_controle/03_02_if.html">If</a></li>
+              <li><a class="dropdown-item" href="../03_structure_controle/03_03_if_else.html">If else</a></li>
+              <li><a class="dropdown-item" href="../03_structure_controle/03_04_if_else_if_else.html">If else if else</a></li>
+              <li><a class="dropdown-item" href="../03_structure_controle/03_05_opérateurs_logiques.html">Opérateurs Logiques</a></li>
+              <li><a class="dropdown-item" href="../03_structure_controle/03_06_precedences.html">Précedences</a></li>
+              <li><a class="dropdown-item" href="../03_structure_controle/03_07_opérateur_ternaire.html">Opérateur ternaire</a></li>
+              <li><a class="dropdown-item" href="../03_structure_controle/03_08_switch.html">Switch</a></li>
+              <li><a class="dropdown-item" href="../03_structure_controle/03_09_boucles.html">Boucles</a></li>
+              <li><a class="dropdown-item" href="../03_structure_controle/03_10_for.html.html">For</a></li>
+              <!-- <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+            </ul>
+          </li>
+              <!-- menu fonctions - 04-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="04_fonctions" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fonctions</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                <li><a class="dropdown-item" href="../04_fonctions/04_01_intro.html">Intro</a></li>
+                <li><a class="dropdown-item" href="../04_fonctions/04_02_portee.html">Portée</a></li>
+                <li><a class="dropdown-item" href="../04_fonctions/04_03_return.html">Return</a></li>
+                <li><a class="dropdown-item" href="../04_fonctions/04_04_conclusion.html">Conclusion</a></li>
+              </ul>
+            </li>
+
+              <!-- menu objets - 05-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="05_objets" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Objet</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                <li><a class="dropdown-item" href="../05_objets/05_01_intro.html">Intro</a></li>
+                <li><a class="dropdown-item" href="../05_objets/05_02_objet_litteral.html">Objet littéral</a></li>
+              </ul>
+            </li>
+
+              <!-- menu fonctions - 06 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="06_selecteurs" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sélecteurs</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                <li><a class="dropdown-item" href="../06_selecteurs/06_01_intro.html">Intro</a></li>
+              </ul>
+            </li>
+
+              <!-- menu evenements - 07 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="07_evenements" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Evénements</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                <li><a class="dropdown-item" href="../07_evenements/07_01_intro.html">Intro</a></li>
+              </ul>
+            </li>
+
+             <!-- menu manipulations - 08-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="08_manipulations" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Manipulations</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                <li><a class="dropdown-item" href="../08_manipulations/08_01_diaporama.html">Diaporama</a></li>
+                <li><a class="dropdown-item active" href="../08_manipulations/08_02_diaporama.html">Diaporama avec setInterval</a></li>
+                <li><a class="dropdown-item" href="../08_manipulations/08_03_keydown.html">Keydown</a></li>
+                <li><a class="dropdown-item" href="../08_manipulations/08_05_toggle.html">Toggle</a></li>
+              </ul>
+            </li>
+
+
+            <!-- menu dom - 09  -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="08_manipulations" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dom</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../09_dom/">Intro</a></li>
+              </ul>
+            </li>
+
+            <!-- menu dossier perso  -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="perso" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Perso</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../perso/perso.html">Perso</a></li>
+              </ul>
+            </li>
+
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li> -->
+
+        </ul>
+
+        <!-- <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+
+      </div>
+    </div>
+  </nav>
+
+    <!-- =========================== -->
+    <!-- En-tête de page -->
+    <!-- =========================== -->
+    <div class="container-fluid en-tete p-5 text-center">
+        <h1 id="titreN1" class="display-4">JavaScript - VIII/02 <br> Diaporama avec setInterval</h1>
+        <p class="lead"><i class="""></i>Des diaporamas en JS <i class=""></i> </p>
+    </div>
+
+    <!-- =========================== -->
+    <!-- Conteneur principal -->
+    <!-- =========================== -->
+    <div class="container p-4">
+
+        <section class="row mt-4">
+            <div class="col-12 col-md-6 ">
+                <h2>1- Avec setInterval( )</h2>
+            </div>
+            <!-- fin col -->
+    
+            <div class="col-12 col-md-6 ">
+                <div id="diapo1">
+                    <img src="img/1.jpg" alt="de l'herbe" class="img-fluid" id="imgDiapo1">
+                </div>
+            </div>
+            <!-- fin col -->
+          
+        </section>
+        <!-- fin rangée -->
+       
+
+    </div>
+    <!-- fin div container -->
+
+    <!-- Optional JavaScript -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/mon_js.js"></script>
+    <script src="js/08_02_diaporama_interval.js"></script>
+
+</body>
+
+</html>
