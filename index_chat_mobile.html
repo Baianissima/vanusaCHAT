@@ -34,30 +34,19 @@
 
     
     <!-- =========================== -->
-    <!-- contenu principal -->
+    <!-- contenu princpal -->
     <!-- =========================== -->
 
     <main>
 
     <!-- =========================== -->
-    <!-- container : carousel au diapo des chats -->
+    <!-- carousel au diapo des chats -->
     <!-- =========================== -->
 
-      <section class="container">
-        <div class="row p-2">
+      <section class="container bg-primary">
+        <div class="row">
+          <div col-12>
 
-            <div class="col-12 d-sm-none d-md-none d-lg-none d-xl-none">
-                <h4>1-Nos chats</h4>
-                <figure>
-                    <img src="img/chat_4.jpg" class="img-fluid" alt="Maki">
-                    <figcaption>Maki</figcaption>
-                </figure>
-            </div>
-
-            <!-- a partir de none -->
-          <div class="col-12 col-sm-12 col-md-8 order-md-2 d-none d-sm-block d-md-block d-lg-block d-xl-block">
-
-            
             <!-- diaporama : ici a changé le nom des id BS par diaporamaChats -->
             <div id="diaporamaChats" class="carousel slide" data-bs-ride="carousel">
 
@@ -126,12 +115,12 @@
           <!-- fin col -->
 
           <!-- Ici le h2 pour le formulaire -->
-          <div class="col-12 col-sm-12 col-md-4 order-md-1">
+          <div class="col-12">
             <h2>Adopte un chat</h2>
             <form action="#" method="POST" id="adopteChat" class="border border primary p-2 bg-light">
 
               <!-- label et select foncrionnent ensemble car ils sont dans la meme div -->
-              <div class="mb-3 form-floating">
+              <div class="mb-3">
                 <label for="choix">Choix du chat</label>
                 <select name="choix" id="choix" class="form-select">
                 
@@ -145,10 +134,9 @@
               </div>
 
               <div class= "mb-3">
+                <label for="message" class="form-label">Raison d'adoption :</label> 
                 <!-- textarea : cols = largeur du textarea en colonnes / rows = hauter avec les rangés ds textarea -->
-                <label for="message" class="form-label">Raison d'adoption :</label>    
-                <textarea name="message" id="message" cols="30" rows="5" placeholder="Dites-nous en plus..." class="form-control"></textarea>
-                
+                <textarea name="message" id="message" cols="30" rows="5" placeholder="Dites-nous en plus..." class="form-control"></textarea>            
               </div>
 
               <div>
@@ -175,7 +163,7 @@
 
 
     <!-- row formulaire -->
-    <section id="formulaire" class="col-sm-12 col-md-8">
+    <section id="formulaire">
       <div id="diaporamaChats" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#diaporamaChats" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
